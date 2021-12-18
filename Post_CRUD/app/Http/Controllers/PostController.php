@@ -11,13 +11,12 @@ class PostController extends Controller
 {
     public function index()
     {
-      //  $posts = DB::table('posts')->latest()->first();
-        $posts= Post::orderBy('created_at', 'DESC')
-                    ->latest()->first()->limit(5)->get();
+        $posts= Post::orderBy('created_at', 'ASC')
+                    ->latest()->limit(5)->get();            
 
       //  $posts = Post::where('active', 1)
       //              ->orderBy('created_at', 'DESC')
-      //              ->latest()->first()->limit(5)->get();
+      //              ->latest()->limit(5)->get();
 
       //  $posts = Post::all();
 
